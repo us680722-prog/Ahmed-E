@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHMEDÉ | More Than A Fragrance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f8f5ef;--ivory:#fffdf9;--gold:#b78a46;--gold2:#d7b47a;--ink:#272521;--muted:#777268;--line:#e6dfd2}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1160px,92%);margin:auto}
+header{height:78px;background:rgba(255,253,249,.92);border-bottom:1px solid var(--line);display:flex;align-items:center;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Cormorant Garamond",serif;font-size:30px;letter-spacing:8px;font-weight:600}
+.brand em{font-style:normal;color:var(--gold)}
+.nav-right{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#6d675e}
+.hero{min-height:690px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:65px 0}
+.eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+h1{font:500 clamp(62px,8vw,105px)/.82 "Cormorant Garamond",serif;letter-spacing:7px;margin:0 0 24px}
+.hero h2{font:400 27px "Cormorant Garamond",serif;letter-spacing:2px;margin:0 0 18px}
+.hero p{max-width:480px;color:var(--muted);font-size:14px;line-height:1.9;font-weight:300}
+.price{font:500 24px "Cormorant Garamond",serif;margin:24px 0 5px}
+.small{font-size:10px;color:#938b7d;letter-spacing:2px;text-transform:uppercase}
+.cta{display:inline-flex;margin-top:25px;padding:15px 30px;background:var(--ink);color:#fff;letter-spacing:2.5px;text-transform:uppercase;font-size:10px;transition:.25s}
+.cta:hover{background:var(--gold)}
+.visual{display:flex;justify-content:center;position:relative}
+.visual:before{content:"";position:absolute;width:390px;height:390px;border-radius:50%;background:#eee6d8;top:55px;z-index:0}
+.photo-area{width:430px;height:520px;position:relative;z-index:1;display:flex;align-items:center;justify-content:center}
+.photo-area img{width:100%;height:100%;object-fit:cover;object-position:center;border-radius:2px;box-shadow:0 30px 60px rgba(80,62,40,.15)}
+.badge{position:absolute;right:-15px;bottom:45px;width:96px;height:96px;border:1px solid #cdb78e;border-radius:50%;display:grid;place-items:center;text-align:center;font:9px "Cormorant Garamond",serif;letter-spacing:1.5px;color:#9d7843;background:rgba(255,253,249,.92)}
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--ivory);padding:25px 0}
+.strip-grid{display:grid;grid-template-columns:repeat(3,1fr);text-align:center}
+.strip strong{display:block;font:600 17px "Cormorant Garamond",serif;letter-spacing:2px}
+.strip span{display:block;font-size:9px;color:#8a8378;letter-spacing:1.5px;margin-top:5px}
+.story{padding:100px 0;display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+.story-card{min-height:360px;background:#eee7da;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;position:relative}
+.story-card:after{content:"";position:absolute;inset:20px;border:1px solid #cdb78e}
+.story-card div{position:relative;z-index:1}
+.story-card b{font:500 68px "Cormorant Garamond",serif;color:var(--gold)}
+.story-card p{font:11px Inter,sans-serif;letter-spacing:3px;text-transform:uppercase}
+.story h3{font:500 48px "Cormorant Garamond",serif;margin:0 0 18px}
+.story p{font-size:14px;line-height:2;color:var(--muted);font-weight:300}
+.order{padding:90px 0 105px;background:#f1ece3}
+.order-box{width:min(720px,100%);margin:auto;background:var(--ivory);padding:48px;border:1px solid var(--line);box-shadow:0 25px 60px rgba(60,45,28,.08)}
+.order-head{text-align:center;margin-bottom:35px}
+.order-head .eyebrow{margin-bottom:9px}
+.order-head h3{font:500 45px "Cormorant Garamond",serif;margin:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}
+.field{margin-bottom:18px}
+.field.full{grid-column:1/-1}
+label{display:block;font-size:9px;letter-spacing:2px;text-transform:uppercase;margin:0 0 8px;color:#625d55}
+input,select,textarea{width:100%;border:1px solid #dcd3c5;background:#fffdfa;padding:14px 13px;font:13px Inter,sans-serif;color:#332f29;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--gold)}
+textarea{min-height:100px;resize:vertical}
+.summary{display:flex;justify-content:space-between;padding:16px;background:#f7f2e9;margin:2px 0 20px;font-size:11px;letter-spacing:1px}
+.order-btn{width:100%;border:0;background:var(--ink);color:#fff;padding:17px;letter-spacing:3px;text-transform:uppercase;font-size:10px;cursor:pointer}
+.order-btn:hover{background:var(--gold)}
+.status{text-align:center;min-height:18px;font-size:12px;margin-top:13px}
+footer{padding:30px 0;text-align:center;background:#fffdf9;border-top:1px solid var(--line);font-size:9px;letter-spacing:3px;color:#918a80}
+@media(max-width:760px){
+ header{height:68px}.brand{font-size:24px}.nav-right{font-size:8px}
+ .hero{grid-template-columns:1fr;text-align:center;padding:55px 0 70px}.hero p{margin:auto}.visual{order:-1}.visual:before{width:310px;height:310px}.photo-area{width:330px;height:410px}.badge{right:2px;bottom:25px;width:76px;height:76px;font-size:8px}
+ .strip-grid{grid-template-columns:1fr;gap:18px}.story{grid-template-columns:1fr;gap:40px;padding:70px 0}.story h3{font-size:40px}.order{padding:65px 0}.order-box{padding:28px 20px}.grid{grid-template-columns:1fr}.field.full{grid-column:auto}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#">AHMED<span>É</span></a>
+  <div class="nav-right">Eau de Parfum · 50 ML</div>
+</div></header>
+
+<section class="hero wrap">
+ <div>
+  <div class="eyebrow">More Than A Fragrance</div>
+  <h1>AHMEDÉ</h1>
+  <h2>It's a Signature.</h2>
+  <p>A refined fragrance with an elegant character, created to become part of your presence. Subtle enough for every day, memorable enough to be noticed.</p>
+  <div class="price">50 ML · Premium Eau de Parfum</div>
+  <div class="small">Limited first launch</div>
+  <a class="cta" href="#order">Order Your Bottle</a>
+ </div>
+ <div class="visual">
+  <div class="photo-area">
+   <img src="ahmede_perfume_hero.png" alt="AHMEDÉ 50 ML Eau de Parfum">
+   <div class="badge">AHMEDÉ<br>MORE THAN<br>A FRAGRANCE</div>
+  </div>
+ </div>
+</section>
+
+<section class="strip"><div class="wrap strip-grid">
+ <div><strong>PREMIUM</strong><span>Refined fragrance experience</span></div>
+ <div><strong>LONG LASTING</strong><span>Made for a lasting impression</span></div>
+ <div><strong>50 ML</strong><span>Elegant everyday size</span></div>
+</div></section>
+
+<section class="story wrap">
+ <div class="story-card"><div><b>A</b><p>AHMEDÉ · Signature</p></div></div>
+ <div>
+  <div class="eyebrow">The House of AHMEDÉ</div>
+  <h3>More than a fragrance.<br>It's your presence.</h3>
+  <p>AHMEDÉ is built around a simple idea: a fragrance should not only smell beautiful — it should become part of the identity of the person wearing it.</p>
+  <p>Designed with a clean, sophisticated aesthetic, AHMEDÉ brings a premium feel to your everyday moments.</p>
+ </div>
+</section>
+
+<section class="order" id="order">
+ <div class="wrap">
+  <div class="order-box">
+   <div class="order-head">
+    <div class="eyebrow">Private Order</div>
+    <h3>Reserve Your Bottle</h3>
+   </div>
+   <form id="orderForm">
+    <div class="grid">
+     <div class="field"><label>Name</label><input name="name" required placeholder="Your full name"></div>
+     <div class="field"><label>City</label><input name="city" required placeholder="Your city"></div>
+<div class="field"><label>Phone Number</label><input type="tel" name="phone" required placeholder="03XX XXXXXXX" inputmode="tel"></div>
+     <div class="field"><label>Quantity</label><input type="number" name="quantity" id="quantity" min="1" step="1" value="1" required placeholder="Enter quantity"></div>
+     <div class="field"><label>Product</label><input value="AHMEDÉ 50 ML" readonly></div>
+     <div class="field full"><label>Delivery Address</label><textarea name="address" required placeholder="House / Street / Area / Complete address"></textarea></div>
+    </div>
+    <div class="summary"><span>YOUR ORDER</span><strong id="summary">1 × AHMEDÉ 50 ML</strong></div>
+    <button class="order-btn" id="submit" type="submit">Confirm Order</button>
+    <div class="status" id="status"></div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<footer>AHMEDÉ · MORE THAN A FRAGRANCE · IT'S A SIGNATURE</footer>
+
+<script>
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwA9wYuYhEOKEUvfmxWDn2Qy2slunTyzZjbBK4I-25_9ieLS0LG8cGis2SGLFR9UpOT9A/exec";
+const q=document.getElementById("quantity"), s=document.getElementById("summary");
+q.addEventListener("input",()=>{ if(q.value<1) q.value=1; s.textContent=q.value+" × AHMEDÉ 50 ML"; });
+
+document.getElementById("orderForm").addEventListener("submit",async function(e){
+ e.preventDefault();
+ const status=document.getElementById("status"), button=document.getElementById("submit");
+ if(GOOGLE_SCRIPT_URL.includes("PASTE_")){
+  status.textContent="Google Sheet connection abhi set nahi hui.";
+  status.style.color="#9a6d35"; return;
+ }
+ button.disabled=true; button.textContent="PROCESSING...";
+ const data=Object.fromEntries(new FormData(this).entries());
+ data.product="AHMEDÉ 50 ML";
+ data.timestamp=new Date().toISOString();
+ try{
+  await fetch(GOOGLE_SCRIPT_URL,{method:"POST",mode:"no-cors",body:JSON.stringify(data)});
+  this.reset(); s.textContent="1 × AHMEDÉ 50 ML";
+  status.textContent="Order received successfully. Thank you for choosing AHMEDÉ.";
+  status.style.color="#4e7654";
+ }catch(err){
+  status.textContent="Order submit nahi hua. Please try again.";
+  status.style.color="#a14c45";
+ }
+ button.disabled=false; button.textContent="CONFIRM ORDER";
+});
+</script>
+</body>
+</html>
